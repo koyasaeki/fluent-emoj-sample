@@ -54,7 +54,11 @@ onMounted(async () => {
 
     <div v-if="disp && disp.emoticons.length > 0">
       <div v-for="icon in disp.emoticons" :key="icon.id">
-        <FluentEmoji v-bind="icon" />
+        <FluentEmoji
+          :id="icon.id"
+          :keywords="icon.keywords"
+          :unicode="icon.unicode"
+        />
       </div>
     </div>
   </div>

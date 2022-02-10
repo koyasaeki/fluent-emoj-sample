@@ -3,12 +3,7 @@ import { computed } from "vue";
 
 interface Emoticon {
   id: string;
-  etag: string;
-  diverse: boolean;
-  description: string;
-  animation: Animation;
   keywords: string[];
-  shortcuts: string[];
   unicode: string;
 }
 
@@ -23,6 +18,7 @@ const url = computed(
 <template>
   <div style="display: flex; align-items: center">
     <img :src="url" />
+    <span>{{ unicode }}</span>
     <span>{{ keywords.join(",") }}</span>
   </div>
 </template>
