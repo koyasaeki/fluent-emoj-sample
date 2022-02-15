@@ -5,7 +5,7 @@ import FluentEmoji from "./components/FluentEmoji.vue";
 interface Animation {
   firstFrame: number;
   fps: number;
-  framesCount: 53;
+  framesCount: number;
 }
 
 interface Emoticon {
@@ -32,7 +32,7 @@ const disp = computed(() => list.value.find((x) => x.title === item.value));
 
 onMounted(async () => {
   const result = await fetch(
-    "https://statics.teams.cdn.office.net/evergreen-assets/personal-expressions/v1/metadata/8479a21d47934aed85d6d6f236847484/ja-jp.json"
+    "https://statics.teams.cdn.office.net/evergreen-assets/personal-expressions/v1/metadata/fa6ddff9337d4d55bf685c5241ed3710/ja-jp.json"
   );
   const data = await result.json();
   list.value = data.categories;
@@ -58,6 +58,7 @@ onMounted(async () => {
           :id="icon.id"
           :keywords="icon.keywords"
           :unicode="icon.unicode"
+          :animation="icon.animation"
         />
       </div>
     </div>
