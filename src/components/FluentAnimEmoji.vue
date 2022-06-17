@@ -33,8 +33,6 @@ const style = computed(() => `object-position: 0px ${objectPositionY.value}px`);
 <template>
   <div style="display: flex; align-items: center">
     <img class="animation" :style="style" :src="url" />
-    <span>{{ unicode }}</span>
-    <span>{{ keywords.join(",") }}</span>
   </div>
 </template>
 

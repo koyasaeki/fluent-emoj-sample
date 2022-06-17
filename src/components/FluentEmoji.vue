@@ -29,19 +29,22 @@ const url = computed(
 </script>
 
 <template>
-  <button style="display: flex; align-items: center" @click="handleClick">
-    <template v-if="anim">
-      <FluentAnimEmoji
-        :id="id"
-        :keywords="keywords"
-        :unicode="unicode"
-        :animation="animation"
-      />
-    </template>
-    <template v-else>
-      <img :src="url" />
-      <span>{{ unicode }}</span>
-      <span>{{ keywords.join(",") }}</span>
-    </template>
-  </button>
+  <div
+    class="tooltip tooltip-bottom tooltip-primary hover:z-10"
+    :data-tip="keywords.join(',')"
+  >
+    <button @click="handleClick">
+      <template v-if="anim">
+        <FluentAnimEmoji
+          :id="id"
+          :keywords="keywords"
+          :unicode="unicode"
+          :animation="animation"
+        />
+      </template>
+      <template v-else>
+        <img :src="url" />
+      </template>
+    </button>
+  </div>
 </template>
