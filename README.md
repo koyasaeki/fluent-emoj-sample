@@ -1,3 +1,3 @@
 # Fluent Emoji
 
-Windows 11 の絵文字アイコンのサンプル
+Windows 11 の絵文字アイコンのサンプル！
