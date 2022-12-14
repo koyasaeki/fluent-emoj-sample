@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "fluent-emoji-sample",
+  base: "sample.fluentemoji",
   build: {
     outDir: "dist"
   },
